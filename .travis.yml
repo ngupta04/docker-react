@@ -6,4 +6,4 @@ before_install:
   - docker build -t pgupta04/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run pgupta04/docker-react npm run test -- --coverage
+  - docker run -e CI=true pgupta04/docker-react npm run test -- --coverage
